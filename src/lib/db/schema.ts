@@ -27,3 +27,20 @@ export const feeds = pgTable("feeds", {
 });
 
 export type Feed = typeof feeds.$inferSelect;
+
+export const feedFollows = pgTable("feed_follows", {
+  id: uuid("id").primaryKey().defaultRandom().notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at")
+    .notNull()
+    .defaultNow()
+    .$onUpdate(() => new Date()),
+  userId: uuid("user_id")
+    .references(() => users.id, { onDelete: "cascade" })
+    .notNull()
+    .unique(),
+  feedId: uuid("feed_id")
+    .references(() => feeds.id, { onDelete: "cascade" })
+    .notNull()
+    .unique(),
+});
