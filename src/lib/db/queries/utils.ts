@@ -4,3 +4,7 @@ export function firstOrUndefined<T>(items: T[]) {
   }
   return items[0];
 }
+
+export function printFeedFollow(userName: string, feedName: string) {
+  console.log(`${userName} followed ${feedName} successfully!`);
+}
