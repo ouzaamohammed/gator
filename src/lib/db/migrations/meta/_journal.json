@@ -29,6 +29,13 @@
       "when": 1765490535194,
       "tag": "0003_naive_fabian_cortez",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1765497471692,
+      "tag": "0004_military_exiles",
+      "breakpoints": true
     }
   ]
 }
