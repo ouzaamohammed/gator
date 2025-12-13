@@ -4,7 +4,11 @@ import {
   runCommand,
   type CommandsRegistry,
 } from "./commands/commands";
-import { handlerFollow, handlerListFeedFollows } from "./commands/feed-follows";
+import {
+  handlerFollow,
+  handlerListFeedFollows,
+  handlerUnfollow,
+} from "./commands/feed-follows";
 import { handlerAddFeed, handlerListFeeds } from "./commands/feeds";
 import { handlerReset } from "./commands/reset";
 import {
@@ -38,6 +42,7 @@ async function main() {
     "following",
     middlewareLoggedIn(handlerListFeedFollows)
   );
+  registerCommand(registry, "unfollow", middlewareLoggedIn(handlerUnfollow));
 
   try {
     await runCommand(registry, cmdName, ...cmdArgs);
