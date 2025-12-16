@@ -1,6 +1,6 @@
 import { getUserById } from "../lib/db/queries/users";
 import { createFeed, getFeeds } from "../lib/db/queries/feeds";
-import { Feed, User } from "../lib/db/schema";
+import type { Feed, User } from "../lib/db/schema";
 import { createFeedFollow } from "../lib/db/queries/feed-follows";
 import { printFeedFollow } from "../lib/db/queries/utils";
 

@@ -40,7 +40,7 @@ async function main() {
   registerCommand(
     registry,
     "following",
-    middlewareLoggedIn(handlerListFeedFollows)
+    middlewareLoggedIn(handlerListFeedFollows),
   );
   registerCommand(registry, "unfollow", middlewareLoggedIn(handlerUnfollow));
 
