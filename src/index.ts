@@ -1,4 +1,5 @@
 import { handlerAgg } from "./commands/aggregate";
+import { handlerBrowse } from "./commands/browse";
 import {
   registerCommand,
   runCommand,
@@ -43,6 +44,7 @@ async function main() {
     middlewareLoggedIn(handlerListFeedFollows),
   );
   registerCommand(registry, "unfollow", middlewareLoggedIn(handlerUnfollow));
+  registerCommand(registry, "browse", middlewareLoggedIn(handlerBrowse));
 
   try {
     await runCommand(registry, cmdName, ...cmdArgs);

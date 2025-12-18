@@ -43,6 +43,13 @@
       "when": 1765662564374,
       "tag": "0005_blue_ravenous",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1765898419690,
+      "tag": "0006_rare_crusher_hogan",
+      "breakpoints": true
     }
   ]
 }

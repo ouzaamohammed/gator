@@ -16,7 +16,7 @@ export type UserCommandHandler = (
 export function registerCommand(
   registry: CommandsRegistry,
   cmdName: string,
-  handler: CommandHandler
+  handler: CommandHandler,
 ) {
   registry[cmdName] = handler;
 }
